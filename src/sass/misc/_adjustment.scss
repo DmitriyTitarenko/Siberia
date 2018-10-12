@@ -12,10 +12,33 @@ body {
 
 .container {
   width: 100%; 
+  padding: 100px 0 100px 0;
 }
 
 
 .p {
   margin: 0;
   padding: 0;
+}
+
+.section-title {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Exo 2', sans-serif;
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
