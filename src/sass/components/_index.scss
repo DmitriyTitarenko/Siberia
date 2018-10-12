@@ -71,39 +71,38 @@
         margin-right: 110px;
     }    
 
-    &:nth-child(1)::before{
-        background-image: url(../img/location.png);
-        position: absolute;
-        background-size: 10px 10px;
-        background-color: black;
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        
-        left: -50%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 50px;
-    }
 
-    &:nth-child(2)::before{
-        content: url(../img/tel.png);
-        position: absolute;
-        left: -50%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 50px;
-    }
+    // &:nth-child(2)::before{
+    //     content: url(../img/tel.png);
+    //     position: absolute;
+    //     left: -50%;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     margin-right: 50px;
+    // }
 
-    &:nth-child(3)::before{
-        content: url(../img/mail.png);
-        position: absolute;
-        left: -50%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 50px;
+    // &:nth-child(3)::before{
+    //     content: url(../img/mail.png);
+    //     position: absolute;
+    //     left: -50%;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     margin-right: 50px;
+    // }
+}
+
+.adress__list-item--descr {
+    position: absolute;
+
+
+    &:before{
+        content: url(../img/location.png);
+        display: block;
+        width: 10px;
+        height: 10px;
     }
 }
+
 
 .adress_list-item--link {
     text-decoration: none;
