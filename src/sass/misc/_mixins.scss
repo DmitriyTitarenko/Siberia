@@ -1,4 +1,8 @@
-@mixin fontProBold {
-  font-family: "PFDDP-Bold", "sans-serif";
+@mixin fontSans {
+  font-family: "sans-serif";
 }
 
+
+@mixin fontMitrExtraLight {
+  font-family: "mitrExtraLight", "sans-serif";
+}

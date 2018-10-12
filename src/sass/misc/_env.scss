@@ -1,38 +1,13 @@
-$semiGrey: #929292;
+$semiBlue: #0f4583;
+$white: #ffffff;
+$whiteBlue: #0296ea;
+$semiGrey: #707070;
+$semiBlack: #191919;
+$semiWhite: #fffefe;
+
 
 @font-face {
-    font-family: 'PFDDP-Regular';
-    src: local('PFDDP-Regular'),
-    url('../fonts/PFDDP-Regular.ttf');
+    font-family: 'mitrExtraLight';
+    src: local('mitrExtraLight'),
+    url('../fonts/mitr.extralight.ttf');
 }
-
-@font-face {
-    font-family: 'PFDDP-Medium';
-    src: local('PFDDP-Medium'),
-    url('../fonts/PFDDP-Medium.ttf');
-}
-        
-@font-face {
-    font-family: 'PFDDP-Black';
-    src: local('PFDDP-Black'),
-    url('../fonts/PFDDP-Black.ttf');
-}
-
-@font-face {
-    font-family: 'PFDDP-Bold';
-    src: local('PFDDP-Bold'),
-    url('../fonts/PFDDP-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'PFDDP-ExtraThin';
-    src: local('PFDDP-ExtraThin.ttf'),
-    url('../fonts/PFDDP-ExtraThin.ttf');
-}
-
-@font-face {
-    font-family: 'PFDDP-Thin';
-    src: local('PFDDP-Thin.ttf'),
-    url('../fonts/PFDDP-Thin.ttf');
-}
-

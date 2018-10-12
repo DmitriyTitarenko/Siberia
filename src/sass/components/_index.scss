@@ -9,69 +9,159 @@
 
 
 
-.map {
+#map {
     width: 100%;
-    height: 400px;
+    height: 498px;
 }
 
-.dropbtn {
-    padding: 5px;
-    cursor: pointer;
+
+// 
+// 
+// contacts
+// 
+// 
+
+
+
+.contacts__wrap {
+    background-color: $whiteBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 100px 0;
+    font-family: 'Exo 2', sans-serif;
+    color: $white;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
+.contacts__title {
+    margin-bottom: 30px;
+    font-weight: 200;
+}
+
+.contacts__subtitle {
+    margin: 0;
+}
+
+.contacts__title {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contacts__subtitle {
+    margin-bottom: 66px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.adress__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.adress__list-item {
+    width: 200px;
     position: relative;
-    display: inline-block;
+  
+    
+    &:not(:last-child) {
+        margin-right: 110px;
+    }    
+
+    &:nth-child(1)::before{
+        background-image: url(../img/location.png);
+        position: absolute;
+        background-size: 10px 10px;
+        background-color: black;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        
+        left: -50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 50px;
+    }
+
+    &:nth-child(2)::before{
+        content: url(../img/tel.png);
+        position: absolute;
+        left: -50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 50px;
+    }
+
+    &:nth-child(3)::before{
+        content: url(../img/mail.png);
+        position: absolute;
+        left: -50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 50px;
+    }
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 140px;
-}
-
-.dropbtn
-{
-  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
-  padding-left: 25px;
-  width: 40px;
-}
-
-.dropbtn::after {
-    background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
-    content: "";
-    height: 16px;
-    position: absolute;
-    right: 0;
-    top: 7px;
-    width: 16px;
-}
-
-.dropdown-content a:first-child
-{
-  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
-}
-
-.dropdown-content a:last-child
-{
-  background: url('http://www.miru-mir.info/images/en.gif') no-repeat left center;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 2px 0 2px 25px;
+.adress_list-item--link {
     text-decoration: none;
-    display: block;
+    color: $white;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+// 
+// 
+// end contacts
+// 
+// 
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
+
+// 
+// 
+// footer
+// 
+// 
+
+
+
+.footer__wrap {
+    display: flex;
+    justify-content: space-around;
+    background-color: $semiBlue;
+    color: $white;
+    @include fontSans;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.05px;
+    padding: 35px 0 35px 0;
+}
+
+
+.footer__company {
+    @include fontMitrExtraLight;
+}
+
+.footer__develop {
+    text-decoration: none;
+    color: $white;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer__developer-descr {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    font-size: 14px;
+    margin-right: 12px;
+}
+
+.footer__developer-img {
+    width: 119px;
+    height: 40px;
 }
