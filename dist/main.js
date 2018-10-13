@@ -1,3 +1,11 @@
+$('.multiple-items').slick({
+    infinite: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  });
+
+
 function map(initmap) {
     const coordinates = {lat: 55.044757, lng: 82.897426},
     markerImage = 'img/marker.png',
@@ -23,14 +31,4 @@ function map(initmap) {
       
       map('initmap');
 
-function slider(slick) { 
-    $('.multiple-items').slick({
-        infinite: true,
-        dots: true,
-        slidesToShow: 3,
-        slidesToScroll: 1
-      });
-}
       
-
-slider('slick');

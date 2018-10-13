@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/main.min.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
     <title>tesktask</title>
 </head>
 <body>
@@ -93,16 +95,86 @@
     </section> -->
 
     <section class="container slider__wrap">
+        <div class="intro__slider">
+            <div class="intro__slide">
+                <img class="intro__img" src="img/Backgroundbur.jpg" alt="Slide1">
+                <div class="video__wrapper">
+                    <video id="video1" class="top__video" preload="none" poster="img/video-preview.png">
+                        <source src="video/main-video.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                    </video>
+                    
+                </div>
+                <button class="btn btn--video">make it beautiful</button>
+             
+            </div>
+            
+            <div class="intro__slide">
+                <img class="intro__img" src="img/Backgroundbur.jpg" alt="Slide1">
+                <div class="video__wrapper">
+                    <video id="video2" class="top__video" preload="none" poster="img/video-preview.png">
+                        <source src="video/main-video.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+                <button class="btn btn--video">make it beautiful</button>
+            
+            </div>
+            <!-- /intro__slide -->
 
-        <div class="slider single-item">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
+            <div class="intro__slide">
+                <img class="intro__img" src="img/Backgroundbur.jpg" alt="Slide1">
+                <div class="video__wrapper">
+                    <video id="video3" class="top__video" preload="none" poster="img/video-preview.png">
+                        <source src="video/main-video.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                    </video>
+
+                </div>
+                 <button class="btn btn--video">make it beautiful</button>
+
+            </div>
+            <!-- /intro__slide -->
+
+        </div><!--/ intro__slider -->
+        <div class="storage__slide">
+            <div class="storage__item">
+                <img src="img/rel-item1__bag.jpg" alt="item" class="storage__item-picture">
+                <div class="storage__item--descr">
+                    <a href="#" class="storage__item-status storage__item-status--new">New</a>
+                    <h4 class="storage__item-category">Bags</h4>
+                    <h3 class="storage__item-name">Marschall Pack</h3>
+                    <button class="btn buy--btn">$ 359.00</button>
+                </div>
+            </div>
         </div>
         
+        <div class="storage__slide">
+            <div class="storage__item">
+                <img src="img/rel-item2__keys.jpg" alt="item" class="storage__item-picture">
+                <div class="storage__item--descr ">
+                    <a href="# " class="storage__item-status storage__item-status--best">Best Buy</a>
+                    <h4 class="storage__item-category ">Accessories</h4>
+                    <h3 class="storage__item-name ">EDC Kit 2</h3>
+                    <button class="btn buy--btn ">$ 229.00</button>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="storage__slide ">
+            <div class="storage__item ">
+                <img src="img/rel-item3__pack.jpg " alt="item " class="storage__item-picture ">
+                <div class="storage__item--descr ">
+                    <a href="# " class="storage__item-status storage__item-status--bio">Bio</a>
+                    <h4 class="storage__item-category ">Garden</h4>
+                    <h3 class="storage__item-name ">All Natural Soil</h3>
+                    <button class="btn buy--btn ">$ 16.00</button>
+                </div>
+            </div>
+        </div>
+        <!--/ SECOND SET -->
+
+    </div> <!-- /storage__slider -->
     </section>
     
     <section class="feedback__wrap container">
@@ -153,11 +225,14 @@
             <img src="img/bottom-logo.png" alt="logo_develop" class="footer__developer-img">
         </a>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIYwJzLJpB61jvgzHEhyCb-wkbShnuIG0"></script>
+   
+   
+   
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIYwJzLJpB61jvgzHEhyCb-wkbShnuIG0"></script>
     <script src="main.js"></script>
-    
-    
 
 
 </body>
