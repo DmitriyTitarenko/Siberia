@@ -34,6 +34,9 @@ function map(initmap) {
         fade: false,
         cssEase: 'ease-in-out',
         adaptiveHeight: false,
+        
+        slidesToShow: 3,
+        slidesToScroll: 3,
     
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
@@ -47,3 +50,7 @@ function map(initmap) {
             }
         ]
     });
+
+   
+       
+     
