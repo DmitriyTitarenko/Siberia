@@ -2,7 +2,17 @@
   font-family: "sans-serif";
 }
 
+@mixin fontLato {
+  font-family: 'Lato', sans-serif;
+}
 
-@mixin fontMitrExtraLight {
-  font-family: "mitrExtraLight", "sans-serif";
+@mixin fontExo {
+  font-family: 'Exo 2', sans-serif;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
 }

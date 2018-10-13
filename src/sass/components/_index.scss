@@ -47,82 +47,42 @@
     display: flex;
 }
 
-.feedback__form-group {
-    position: relative;
-    margin-right: 20px;
-}
 
 .feedback__form-input {
-    padding: 20px 0 30px ;
-    
-    &:focus {
-        outline: none;
+    padding: 24px 80px 25px 30px; 
+    margin-right: 20px;
+    border: 2px solid $whiteBlue;
+    border-radius: 30px;
+    outline: none;
+    width: 302px;
+    height: 62px;
+    background: transparent;
+    @include fontLato;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 36px;
+    color: $colorPlaceholder;
+
+    @include placeholder {
+        color: $colorPlaceholder;
+        @include fontLato;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 36px;
     }
 }
 
-label {
-    color: #999;
-    font-size: 18px;
-    position: absolute;
-    pointer-events: none;
-    left: 10px;
-    top: 15px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-  }
-
-  input:focus ~ label, input:valid ~ label {
-    top: -15px;
-    font-size: 14px;
-    color: #5264AE;
-  }
-
-  .bar {
-    position: relative;
-    display: block;
-    width: 320px;
-  }
-  .bar:before, .bar:after {
-    content: "";
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    position: absolute;
-    background: #5264AE;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-  }
-  .bar:before {
-    left: 50%;
-  }
-  .bar:after {
-    right: 50%;
-  }
-  
-  /* active state */
-  input:focus ~ .bar:before,
-  input:focus ~ .bar:after {
-    width: 50%;
-  }
-
-  .group {
-    position: relative;
-    margin-bottom: 30px;
-  }
-  
-  input {
-    font-size: 16px;
-    padding: 10px;
-    display: block;
-    width: 300px;
+.feedback__form-btn {
+    text-transform: uppercase;
     border: none;
-    border-bottom: 1px solid #ccc;
-  }
-  input:focus {
-    outline: none;
-  }
+    background-color: $whiteBlue;
+    color: $white;
+    padding: 25px 75px;
+    border-radius: 30px;
+    font-size: 18px;
+    @include fontExo;
+    font-weight: 400;
+}
 
 // 
 // 
@@ -252,10 +212,6 @@ label {
     padding: 35px 0 35px 0;
 }
 
-
-.footer__company {
-    @include fontMitrExtraLight;
-}
 
 .footer__develop {
     text-decoration: none;
