@@ -1,11 +1,3 @@
-$('.multiple-items').slick({
-    infinite: true,
-    dots: true,
-    slidesToShow: 3,
-    slidesToScroll: 1
-  });
-
-
 function map(initmap) {
     const coordinates = {lat: 55.044757, lng: 82.897426},
     markerImage = 'img/marker.png',
@@ -31,4 +23,27 @@ function map(initmap) {
       
       map('initmap');
 
-      
+      $('.intro__slider').slick({
+
+        dots: true,
+        arrows: true,
+        infinite: false,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        speed: 500,
+        fade: false,
+        cssEase: 'ease-in-out',
+        adaptiveHeight: false,
+    
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    arrows: false
+    
+                }
+            }
+        ]
+    });
