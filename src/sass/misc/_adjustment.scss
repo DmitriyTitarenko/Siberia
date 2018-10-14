@@ -42,3 +42,17 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
+.ui-btn {
+  @include fontExo;
+  color: $white;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: transparent;
+  border: 3px solid $white;
+  border-left: none;
+  border-right: none;
+  padding: 25px 45px;
+  outline: none;
+  font-size: 18px;
+}
