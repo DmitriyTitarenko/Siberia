@@ -16,6 +16,158 @@
 
 // 
 // 
+// advantages
+// 
+// 
+
+
+.advantages__wrap {
+    background: url(../img/scheme.png) center center no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantages__subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: $semiBlue;
+    text-transform: uppercase;
+    @include fontExo;   
+    margin: 0;
+}
+
+.advantages__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    @include fontExo;
+    font-size: 48px;
+    color: $whiteBlue;
+    position: relative;
+    margin: 100px 0 25px 0;
+
+    &::before {
+        content: '';
+        border-right: 2px solid $whiteBlue;
+        position: absolute;
+        height: 20px;
+        right: 50%;
+        top: -50%;
+    }
+}
+
+.advantages__descr {
+    width: 950px;
+    text-align: center;
+    font-size: 18px;
+    @include fontExo;
+    line-height: 30px;
+    font-weight: 400;
+    color: $semiGrey;
+    margin: 0 0 80px 0;
+}
+
+.advantages__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.advantages__list-item {
+    width: 400px;
+   
+   &:nth-child(odd) {
+        margin-right: 116px;
+   }
+}
+
+
+// 
+// 
+// end advantages
+// 
+// 
+
+// 
+// 
+// manufacture
+// 
+// 
+
+.manufacture__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/100per.jpg) center center no-repeat;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.manufacture__title {
+    font-size: 72px;
+    font-weight: 800;
+    color: $white;
+    margin: 0 0 36px 0;
+    position: relative;
+
+    &::after {
+        content: '';
+        border-bottom: 2px solid $whiteBlue;
+        display: inline-block;
+        position: absolute;
+        width: 22px;
+        right: -20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        content: '';
+        border-bottom: 2px solid $whiteBlue;
+        display: inline-block;
+        position: absolute;
+        width: 22px;
+        left: -20%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+}
+
+.manufacture__subtitle {
+    color: $white;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 0 0 57px 0;
+}
+
+
+.ui-btn {
+    @include fontExo;
+    color: $white;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: transparent;
+    border: 3px solid $white;
+    border-left: none;
+    border-right: none;
+    padding: 25px 45px;
+    outline: none;
+    font-size: 18px;
+    
+}
+// 
+// 
+// end manufacture
+// 
+// 
+
+
+// 
+// 
 // slider
 // 
 // 

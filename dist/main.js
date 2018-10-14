@@ -34,7 +34,6 @@ function map(initmap) {
         fade: false,
         cssEase: 'ease-in-out',
         adaptiveHeight: false,
-        
         slidesToShow: 3,
         slidesToScroll: 3,
     
