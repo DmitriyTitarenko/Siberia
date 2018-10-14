@@ -23,33 +23,8 @@ function map(initmap) {
       
       map('initmap');
 
-      $('.intro__slider').slick({
-
-        dots: true,
-        arrows: true,
-        infinite: false,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        speed: 500,
-        fade: false,
-        cssEase: 'ease-in-out',
-        adaptiveHeight: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-    
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
-        responsive: [
-            {
-                breakpoint: 769,
-                settings: {
-                    arrows: false
-    
-                }
-            }
-        ]
-    });
-
+     
+        
    
        
      
