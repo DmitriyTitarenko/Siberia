@@ -199,12 +199,16 @@
 
 .bottom__nav-item {
     padding: 29px 23px;
-
+    position: relative;
   
 
     &:hover{
-        border-top: 4px solid $whiteBlue;
-	    background-color:  rgba(0, 0, 0, 0.2);
+        &::before {
+            position: absolute;
+            
+            background-color:  rgba(0, 0, 0, 0.2);
+        }
+	    
     }
 }
 
@@ -605,6 +609,25 @@
     margin-right: 20px;
 }
 
+
+.prev, .next {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background: black;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.prev{
+    left: 0;
+}                                                                      
+
+.next {
+    right: 0;
+}      
 
 
 
