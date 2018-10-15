@@ -9,12 +9,18 @@
 
 
 
-.active {
-    background: black;
-}
-.header__wrap {
+
+
+.header {
     display: flex;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .headerinfo__wrap {
@@ -35,6 +41,8 @@
     list-style: none;
     color: $white;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
 .upper__nav {
@@ -47,6 +55,7 @@
 
 .upper__nav-item {
     margin-right: 42px;
+    position: relative;
 }
 
 .upper__nav-item--link {
@@ -83,6 +92,49 @@
     padding: 11px 26px;
 }
 
+.upper__nav-item--lang {
+    background: transparent;
+    
+    
+}
+
+.upper__nav-item--lang---active {
+    @include fontExo;
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;  
+    position: relative;
+    
+    &::before {
+    content: '';
+    position: absolute;
+    background-size: cover;
+    width: 17px;
+    height: 11px;
+    left: -30%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/ru.png);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-size: cover;
+        width: 12px;
+        height: 7px;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../img/check.png);
+        }
+}
+
+.upper__nav-item--lang---menu {
+    background: transparent;
+}
+
+
 .bottom__nav {
     display: flex;
     list-style: none;
@@ -92,10 +144,7 @@
 .bottom__nav-item {
     padding: 29px 23px;
 
-    &:nth-child(1) {
-        border-top: 4px solid $whiteBlue;
-	    background-color:  rgba(0, 0, 0, 0.2);
-    }
+  
 
     &:hover{
         border-top: 4px solid $whiteBlue;
@@ -139,7 +188,7 @@
 
 
 
-.hero__wrap {
+.hero {
     background: url(../img/top.jpg) center center no-repeat;
     display: flex;
     flex-direction: column;
@@ -147,19 +196,21 @@
     height: 100vh;
     width: 100%;
     position: relative;
+    padding-top: 300px;
 }
 
 .hero__list {
     display: flex;
     list-style: none;
     position: absolute;
-    bottom: -50%;
+    padding: 0;
+    bottom: -30%;
     justify-content: center;
 
 }
 
 .hero__item {
-    width: 582px;
+    width: 30%;
     height: 453px;
     border: 10px solid $white;
     margin-right: 20px;
@@ -274,6 +325,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0;
 }
 
 .advantages__list-item {
@@ -375,7 +427,7 @@
 // 
 // 
 
-.manufacture__wrap {
+.manufacture {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -554,7 +606,7 @@
 
 
 
-.feedback__wrap {
+.feedback {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -627,7 +679,7 @@
 
 
 
-.contacts__wrap {
+.contacts {
     background-color: $whiteBlue;
     display: flex;
     flex-direction: column;
@@ -735,7 +787,7 @@
 
 
 
-.footer__wrap {
+.footer {
     display: flex;
     justify-content: space-around;
     background-color: $semiBlue;
