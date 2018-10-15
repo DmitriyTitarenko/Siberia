@@ -4,8 +4,8 @@ $(document).ready(function(){
         slidesToShow: 5,
         slidesToScroll: 5,
         dots: true,
-        prevArrow: '<img class="btnPrev" src="img/nextArrow.png">',
-        nextArrow: '<img class="btnNest" src="img/nextArrow.png">'
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
     });
   });
  
