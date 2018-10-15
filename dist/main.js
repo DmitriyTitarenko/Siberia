@@ -6,7 +6,6 @@ $(document).ready(function(){
         dots: true,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
-        
 
         responsive: [
             {

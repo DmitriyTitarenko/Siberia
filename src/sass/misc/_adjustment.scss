@@ -50,12 +50,25 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   text-transform: uppercase;
   background: transparent;
-  border: 3px solid $white;
-  border-left: none;
-  border-right: none;
+  border: none;
   padding: 25px 45px;
   outline: none;
   font-size: 18px;
+  border: 3px solid $white;
+  border-left: transparent;
+  border-right: transparent;
+  
+
+  &:hover{
+    cursor: pointer;
+    border-left: 3px solid $white;
+    border-right: 3px solid $white;
+    transition: all 2ms ease-in-out;
+  }
+ 
+
+  
+
 }
 
 
