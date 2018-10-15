@@ -80,6 +80,10 @@
     transform: translateY(-50%);
     background-image: url(../img/call.png);
     }
+
+    :hover {
+        color: $whiteBlue;
+    }
 }
 
 .upper__nav-item--btn {
@@ -93,6 +97,10 @@
     font-weight: 400;
     color: $white;
     padding: 11px 26px;
+
+    &:hover {
+        color: $semiBlue;
+    }
 }
 
 .dropbtn {
@@ -100,7 +108,7 @@
     cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -200,17 +208,28 @@
 .bottom__nav-item {
     padding: 29px 23px;
     position: relative;
-  
 
-    &:hover{
-        &::before {
-            position: absolute;
-            
-            background-color:  rgba(0, 0, 0, 0.2);
-        }
-	    
+
+    &::before {
+        content: "";
+        display: none;
+        position: absolute;
+        border: 2px solid $whiteBlue;
+        width: 97%;
+        left: 0%;
+        top: 0;
     }
+
+    &:hover {
+        background-color:  rgba(0, 0, 0, 0.2);
+    }
+    
+
+    &:hover::before {
+            display: block;
+        }
 }
+
 
 .bottom__nav-item--link {
     text-decoration: none;
@@ -219,6 +238,8 @@
     font-size: 20px;
     font-weight: 300;
     position: relative; 
+
+    
 }
 
 .bottom__nav-item--img {
@@ -297,21 +318,35 @@
             background-image: url(../img/services.jpg);
         }
 
-        &:nth-child(2):before{
+        &::before {
+            display: none;
             content: '';
-            display: block;
-            background-color:  rgba(2, 150, 234, 0.9);
-            z-index: -100;
             width: 100%;
             height: 100%;
             position: absolute;
-
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color:  rgba(2, 150, 234, 0.5);
         }
-    
+
+        &:hover::before {
+            display: block;
+            }
 }
+
+
 .hero__item:hover {
     border: 10px solid $white;
 }
+
+.hero__item:hover .hero__item-title::before {
+    border-right: 2px solid $white;
+    transition: all 2ms ease-in-out;
+}
+
+
+
 
 .hero__item-title {
     color: $white;
@@ -331,6 +366,7 @@
         right: 50%;
         top: 30%;
     }
+    
 }
 
 .hero__item-descr {
