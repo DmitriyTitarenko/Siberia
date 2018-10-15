@@ -95,11 +95,68 @@
     padding: 11px 26px;
 }
 
-.upper__nav-item--lang {
-    background: transparent;
-    
-    
+.dropbtn {
+    padding: 5px;
+    cursor: pointer;
 }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    @include fontExo;
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;  
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+}
+
+.dropbtn
+{
+  background: url('../img/ru.png') no-repeat left center;
+  padding-left: 25px;
+  width: 40px;
+}
+
+.dropbtn::after {
+    background: url('../img/check.png') no-repeat right center;
+    content: "";
+    height: 7px;
+    position: absolute;
+    right: -60%;
+    bottom: 35%;
+    width: 12px;
+}
+
+.dropdown-content a:first-child
+{
+  background:  url('../img/ru.png') no-repeat left center;
+}
+
+.dropdown-content a {
+    @include fontExo;
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;  
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {background-color: $semiGrey
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 
 .upper__nav-item--lang---active {
     @include fontExo;
@@ -131,11 +188,7 @@
         transform: translateY(-50%);
         background-image: url(../img/check.png);
         }
-}
-
-.upper__nav-item--lang---menu {
-    background: transparent;
-}
+    }
 
 
 .bottom__nav {
@@ -185,6 +238,7 @@
     width: 900px;
     @include fontExo;
     text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 
@@ -196,10 +250,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     width: 100%;
     position: relative;
-    padding-top: 300px;
+    padding-top: 190px;
 }
 
 .hero__list {
@@ -208,7 +261,7 @@
     list-style: none;
     position: relative;
     padding: 0;
-    bottom: 0%;
+    top: 150px;
     justify-content: center;
 
 }
@@ -283,10 +336,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 200px;
 }
 
 .advantages__subtitle {
-    padding-top: 300px;
+    
     font-size: 18px;
     font-weight: 300;
     color: $semiBlue;
@@ -294,6 +348,7 @@
     @include fontExo;   
     margin: 0;
 }
+
 
 .advantages__title {
     text-transform: uppercase;
@@ -324,6 +379,8 @@
     color: $semiGrey;
     margin: 0 0 80px 0;
 }
+
+
 
 .advantages__list {
     width: 1200px;
@@ -496,105 +553,66 @@
 // slider
 // 
 // 
+.slider {
+    padding: 70px 0 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../img/scheme-bottom.png');
+}
 
-.intro__slider {
+.slider__title {
+    font-size: 48px;
+    font-weight: 700;
+    color: $whiteBlue;
+    text-transform: uppercase;
+    @include fontExo;   
+    margin: 0;
     position: relative;
+    padding: 30px 0;
+
+    &::before {
+    content: '';
+    border-right: 2px solid #0296ea;
+    position: absolute;
+    height: 20px;
+    right: 50%;
+    top: 0%;
+    }
+}
+
+.slider__descr {
+    width: 950px;
     text-align: center;
-    padding: 0;
-    margin: 0; }
-    .intro__slider {
-        position: relative;
-        text-align: center;
-        padding: 0;
-        margin: 0; }
-      
-      @media screen and (max-width: 1024px) {
-        .slick-dotted.slick-slider {
-          margin-bottom: 0; } }
-      
-      .intro__slide {
-        position: relative;
-        z-index: 1;
-        -webkit-border-radius: 6px;
-                border-radius: 6px; }
-      
-      .intro__img {
-        display: block;
-        width: 100%;
-        height: auto;
-        -webkit-border-radius: 20px;
-                border-radius: 20px;
-        -webkit-filter: blur(4px) opacity(50%);
-                filter: blur(4px) opacity(50%); }
-      
-      .prev,
-      .next {
-        z-index: 3;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center;
-        width: 42px;
-        height: 42px;
-        margin: 0;
-        cursor: pointer;
-        color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.35);
-        -webkit-border-radius: 50%;
-                border-radius: 50%; }
-      
-      .slick-disabled {
-        color: rgba(255, 255, 255, 0.35); }
-      
-      .prev {
-        left: 70px; }
-        @media screen and (max-width: 768px) {
-          .prev {
-            display: none;
-            visibility: hidden; } }
-      
-      .next {
-        right: 70px; }
-        @media screen and (max-width: 768px) {
-          .next {
-            display: none;
-            visibility: hidden; } }
-      
-      .slick-dots {
-        bottom: 30px; }
-        @media screen and (max-width: 768px) {
-          .slick-dots {
-            bottom: 20px; } }
-        @media screen and (max-width: 612px) {
-          .slick-dots {
-            bottom: 10px; } }
-        .slick-dots li {
-          width: 9px;
-          height: 9px;
-          -webkit-border-radius: 50%;
-                  border-radius: 50%;
-          border: none;
-          border: 2px solid transparent;
-          background-color: rgba(255, 255, 255, 0.35); }
-        .slick-dots .slick-active {
-          width: 9px;
-          height: 9px;
-          -webkit-border-radius: 50%;
-                  border-radius: 50%;
-          border: 2px solid #fff; }
+    font-size: 18px;
+    @include fontExo;
+    line-height: 30px;
+    font-weight: 400;
+    color: $semiGrey;
+    margin: 0 0 80px 0;
+}
+
+.intro__slider  {
+    width: 1200px;
+    display: flex;
+    position: relative;
+}
+
+.sld {
+    width: 220px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.slick-arrow:nth-of-type(1) {
+    position: absolute;
+    right: 0%;
+    bottom: 50%;
+    
+}
+
+
 // 
 // 
 // end slider
@@ -617,7 +635,9 @@
     flex-direction: column;
     align-items: center;
     color: $white;
-    background: url(../img/feedback.jpg)
+    background: url(../img/feedback.jpg);
+    width: 100%;
+    padding: 80px 0 80px 0;
  
 }
 
