@@ -6,6 +6,17 @@ $(document).ready(function(){
         dots: true,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
+        
+
+        responsive: [
+            {
+                breakpoint: 1380,
+                settings: {
+                    slidesToShow: 4
+    
+                }
+            }
+        ]
     });
   });
  
