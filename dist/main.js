@@ -22,7 +22,7 @@ $(document).ready(function(){
   
 
 
-        $('.upper__nav, .bottom__nav').slideUp();
+        $('.bottom__nav').slideUp();
         console.log('Do variant manipulation');
 
 
