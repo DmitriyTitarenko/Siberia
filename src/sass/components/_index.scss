@@ -20,6 +20,16 @@
     z-index: 99;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+
+
+  @include medium {
+    width: 768px;
+  }
+
+  @include small {
+    width: 320px;
+  }
 
 }
 
@@ -278,6 +288,14 @@
     width: 100%;
     position: relative;
     padding-top: 190px;
+
+    @include medium {
+        width: 768px;
+      }
+    
+      @include small {
+        width: 320px;
+      }
 }
 
 .hero__list {
