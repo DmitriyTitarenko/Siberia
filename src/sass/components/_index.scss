@@ -6,29 +6,61 @@
 
 
 //
+@media (max-width: 768px) {
+    .upper__nav, .bottom__nav {
+        display: flex; 
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        left: 10px; 
+        position: absolute; 
+        left: 10px }
+    .bottom__nav {top: 220px;
+    display: none; }
+    .upper__nav-item {margin-bottom: 10px }
+    .bottom__nav-item {padding: 14px }
+    }
+
+
+
+
+    .menu-btn {
+        display: none;
+
+        @include medium {
+            display: block;
+        }
+    }
+
 
 
 
 
 
 .header {
+   width: 100%;
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 99;
+   flex-direction: column;
+   align-items: center;
+   
+
+
+  @include medium {
     display: flex;
     position: absolute;
     top: 0;
-    width: 100%;
     left: 0;
     z-index: 99;
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-
-  @include medium {
-    width: 768px;
   }
 
   @include small {
-    width: 320px;
+    width: 100%;
   }
 
 }
@@ -213,6 +245,10 @@
     display: flex;
     list-style: none;
     padding: 0;
+
+    @include medium {
+        display: none;
+    }
 }
 
 .bottom__nav-item {
@@ -290,11 +326,11 @@
     padding-top: 190px;
 
     @include medium {
-        width: 768px;
+        width: 100%;
       }
     
       @include small {
-        width: 320px;
+        width: 100%;
       }
 }
 
@@ -652,6 +688,15 @@
     flex-direction: column;
     align-items: center;
     background: url('../img/scheme-bottom.png');
+
+    
+    @include medium {
+        width: 768px;
+    }
+
+    @include small {
+        width: 320px;
+    }
 }
 
 .slider__title {
@@ -687,13 +732,31 @@
 
 .slider__wrap {
     position: relative;
+    width: 100%;
+
+    @include medium {
+        width: 768px;
+    }
+
+    @include small {
+        width: 320px;
+    }
 }
 
 .intro__slider  {
-    width: 1200px;
+    
     display: flex;
     position: relative;
     padding-bottom: 30px;
+
+    @include medium {
+        width: 768px;
+    }
+
+    @include small {
+        width: 320px;
+    }   
+    
 }
 
 .sld {
@@ -825,6 +888,8 @@
     align-items: center;
     font-family: 'Exo 2', sans-serif;
     color: $white;
+
+
 }
 
 
@@ -834,6 +899,8 @@
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+
+    
 }
 
 .contacts-subtitle {
@@ -848,6 +915,16 @@
     display: flex;
     align-self: center;
     right: 100%;
+
+    @include medium {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+  
+    @include small {
+     
+    }
 }
 
 .adress__list-item {
@@ -895,6 +972,19 @@
         top: 100%;
         transform: translateY(-50%);
        
+        @include medium {
+            &:nth-child(1) {
+                order: 3;
+              
+            }
+            
+            
+            
+        }
+      
+        @include small {
+         
+        }
     }
 }
 
@@ -918,6 +1008,8 @@
 #map {
     width: 100%;
     height: 498px;
+  
+    
 }
 
 // 
@@ -938,8 +1030,30 @@
     font-weight: 400;
     letter-spacing: 1.05px;
     padding: 35px 0 35px 0;
+
+    @include medium {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+  
+    @include small {
+      width: 100%;
+    }
 }
 
+.footer__company {
+    @include medium {
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+     }
+   
+     @include small {
+       width: 100%;
+     }
+}
 
 .footer__develop {
     text-decoration: none;

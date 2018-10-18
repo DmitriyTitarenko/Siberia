@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .upper__nav, .bottom__nav {display: flex; flex-flow: column nowrap; align-items: flex-start; left: 10px; position: absolute; left: 10px }
+    .bottom__nav {top: 220px }
+    .upper__nav-item {margin-bottom: 10px }
+    .bottom__nav-item {padding: 14px }
+    }
+
+
+
+
+
+
+
+
