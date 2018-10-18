@@ -14,36 +14,33 @@ $(document).ready(function(){
                     slidesToShow: 4
     
                 }
-            },
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3
-    
-                }
-            },
-            {
-                breakpoint: 320,
-                settings: {
-                    slidesToShow: 1
-    
-                }
-            },
+            }
         ]
     });
   });
 
-  function event() {
+  
+(function (doc, $) {
 
-    $(doc).on('click', '.logo__link-img', function (e) {
-        $('.upper__nav, .bottom__nav').slideToggle();
-        console.log(this);
-    });
 
-}
+    function variant() {
 
-(document, jQuery);
+        $('.upper__nav, .bottom__nav').slideUp();
+        console.log('Do variant manipulation');
 
+    }
+
+    function event() {
+
+        $(doc).on('click', '.menu-btn', function (e) {
+            $('.upper__nav, .bottom__nav').slideToggle();
+            console.log(this);
+        });
+
+    }
+
+})(document, jQuery);
+ 
 
 function map(initmap) {
     const coordinates = {lat: 55.044757, lng: 82.897426},
