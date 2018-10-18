@@ -20,15 +20,12 @@ $(document).ready(function(){
   });
 
   
-(function (doc, $) {
 
-
-    function variant() {
 
         $('.upper__nav, .bottom__nav').slideUp();
         console.log('Do variant manipulation');
 
-    }
+
 
     function event() {
 
@@ -37,9 +34,9 @@ $(document).ready(function(){
             console.log(this);
         });
 
-    }
+   
 
-})(document, jQuery);
+
  
 
 function map(initmap) {
@@ -55,7 +52,7 @@ function map(initmap) {
         
     });
 
-    marker = new google.maps.Marker({
+  var  marker = new google.maps.Marker({
         position: coordinates,
         map: map,
         icon: markerImage,
@@ -71,4 +68,4 @@ function map(initmap) {
         
    
        
-     
+    }
