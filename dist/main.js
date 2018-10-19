@@ -19,25 +19,13 @@ $(document).ready(function(){
     });
   });
 
-  
+  $('.menu-btn').on('click', function (e) {
+    $('.bottom__nav').slideDown();
+                if ($(this).hasClass('opened')) {
+    $('.bottom__nav').slideDown();
+    } else $('.bottom__nav').slideDown();
 
-
-        $('.bottom__nav').slideUp();
-        console.log('Do variant manipulation');
-
-
-
-    function event() {
-
-        $(doc).on('click', '.menu-btn', function (e) {
-            $('.upper__nav, .bottom__nav').slideToggle();
-            console.log(this);
-        });
-
-   
-
-
- 
+            });
 
 function map(initmap) {
     const coordinates = {lat: 55.044757, lng: 82.897426},
@@ -66,6 +54,3 @@ function map(initmap) {
 
      
         
-   
-       
-    }
